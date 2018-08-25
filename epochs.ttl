@@ -1,0 +1,372 @@
+@prefix : <http://linked.data.gov.au/dataset/epochs/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix pm: <http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix gnaf: <http://linked.data.gov.au/def/gnaf#> .
+@prefix govt: <http://linked.data.gov.au/dataset/epochs/trs/government/> .
+@prefix parl: <http://linked.data.gov.au/dataset/epochs/trs/parliament/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@base <http://linked.data.gov.au/dataset/epochs> .
+
+<http://linked.data.gov.au/dataset/epochs> rdf:type owl:Ontology ;
+                                            dct:hasPart <http://linked.data.gov.au/dataset/epochs/trs/> ;
+                                            dct:conformsTo <http://www.w3.org/TR/rdf11-concepts/> ;
+                                            dct:modified "2018-08-25"^^xsd:date ;
+                                            dcat:landingPage <http://linked.data.gov.au/dataset/epochs> ;
+                                            dct:conformsTo <http://www.w3.org/TR/owl2-overview/> ,
+                                                           <http://www.w3.org/TR/rdf-schema/> ;
+                                            dct:description """This is a Linked Data dataset that contains representations of epochs relevant to Australian government, such as the political markers of Prime Ministerships and pop-culture time periods like the Cold War.
+
+  *As of August, 2018, this dataset is at a very early stage of development and while this abstract is written as if the dataset is complete and functioning, it is not.*
+
+  This dataset is composed of multiple, named, *timescales* split into *epochs* with relations between them represented using <a href=\"https://doi.org/10.1016/0004-3702(84)90008-0\">Allen's interval algebra</a>. The dataset uses the [Resource Description Framework (RDF)](https://www.w3.org/RDF/) for all data and makes use of the [Time Ontology in OWL](https://www.w3.org/TR/owl-time/) and well known upper ontologies for its modelling.
+
+  Each *timescales* and *epoch* is identified using a persistent URI (PID URI) which is a long-term stable web address issued by the [Australian Government Linked Data Working Group](http://www.linked.data.gov.au). This means that even when technologies and organisations change, the timescales and epochs will be able to be referred to and linked to via web addresses such as this for the Prime Ministerial timescale:
+
+  ```
+  http://linked.data.gov.au/dataset/epochs/timescale/prime-ministerships
+  ```
+
+  The dataset itself is identified by the PID URI that is the base for all timescales and epoch PID URIs, namely:
+
+  ```
+  http://linked.data.gov.au/dataset/epochs
+  ```
+
+  From there, the landing page of the dataset, you can find links to all of its content.""" ;
+                                            dct:creator <http://orcid.org/0000-0002-8742-7730> ;
+                                            dct:title "Epochs Dataset" ;
+                                            reg:containedItemClass time:TRS ;
+                                            dct:temporal "1901 - present" ;
+                                            dc:creator "Nicholas Car"@en ;
+                                            dct:conformsTo <https://www.w3.org/TR/owl-time/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/linked-data/registry#register
+reg:register rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+time:hasBeginning rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+time:hasEnd rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#hasTRS
+time:hasTRS rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#inTimePosition
+time:inTimePosition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#inXSDDate
+time:inXSDDate rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#intervalAfter
+time:intervalAfter rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#intervalBefore
+time:intervalBefore rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/time#numericPosition
+time:numericPosition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+dcat:downloadURL rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#mediaType
+dcat:mediaType rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/linked-data/registry#Register
+reg:Register rdf:type owl:Class .
+
+
+###  http://purl.org/linked-data/registry#RegisteredItem
+reg:RegisteredItem rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#ProperInterval
+time:ProperInterval rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TRS
+time:TRS rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://linked.data.gov.au/dataset/epochs
+<http://linked.data.gov.au/dataset/epochs> rdf:type owl:NamedIndividual ,
+                                                    dcat:Dataset .
+
+
+###  http://linked.data.gov.au/dataset/epochs/distribution
+:distribution rdf:type owl:NamedIndividual ,
+                       dcat:Distribution ;
+              dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+              dct:rights "&copy; CSIRO, 2018" ;
+              dct:title "Epochs Dataset as RDF" ;
+              dcat:downloadURL :distribution ;
+              dcat:mediaType <https://w3id.org/mediatype/text/html> ,
+                             <https://w3id.org/mediatype/text/turtle> .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/
+<http://linked.data.gov.au/dataset/epochs/trs/> rdf:type owl:NamedIndividual ,
+                                                         reg:Register ;
+                                                rdfs:label "Register of Epochs" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/governments-of-australia
+<http://linked.data.gov.au/dataset/epochs/trs/governments-of-australia> rdf:type owl:NamedIndividual ,
+                                                                                 reg:RegisteredItem ,
+                                                                                 time:TRS ;
+                                                                        reg:register <http://linked.data.gov.au/dataset/epochs/trs/> ;
+                                                                        rdfs:label "Governments of Australia" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliaments
+<http://linked.data.gov.au/dataset/epochs/trs/parliaments> rdf:type owl:NamedIndividual ,
+                                                                    reg:RegisteredItem ,
+                                                                    time:TRS ;
+                                                           reg:register <http://linked.data.gov.au/dataset/epochs> ,
+                                                                        <http://linked.data.gov.au/dataset/epochs/trs/> ;
+                                                           rdfs:label "Australian Federal Parliaments" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minsterships
+<http://linked.data.gov.au/dataset/epochs/trs/prime-minsterships> rdf:type owl:NamedIndividual ,
+                                                                           reg:RegisteredItem ,
+                                                                           time:TRS ;
+                                                                  reg:register <http://linked.data.gov.au/dataset/epochs/trs/> ;
+                                                                  rdfs:label "Prime Minsterships" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/government/
+govt: rdf:type owl:NamedIndividual ,
+               reg:Register ;
+      rdfs:label "Register of Governments of Australia" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/government/Howard
+govt:Howard rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            reg:register govt: ;
+            time:intervalAfter pm:Gillard ;
+            time:intervalBefore pm:Howard .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/government/Keating
+govt:Keating rdf:type owl:NamedIndividual ,
+                      reg:RegisteredItem ,
+                      time:ProperInterval ;
+             reg:register govt: ;
+             rdfs:label "Keating Government" ;
+             time:hasBeginning [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                       time:numericPosition 693187200.0
+                                                     ] ;
+                                 time:inXSDDate "1991-12-20"^^xsd:date
+                               ] ;
+             time:hasEnd [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                 time:numericPosition 826502400.0
+                                               ] ;
+                           time:inXSDDate "1996-03-11"^^xsd:date
+                         ] ;
+             time:intervalAfter govt:Howard .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/
+parl: rdf:type owl:NamedIndividual ,
+               reg:Register ;
+      rdfs:label "Register of Parliaments" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/nd
+parl:nd rdf:type owl:NamedIndividual ,
+                 reg:RegisteredItem ,
+                 time:ProperInterval ;
+        reg:register parl: ;
+        rdfs:label "2nd Parliament" ;
+        time:hasBeginning [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                  time:numericPosition -2084227200.0
+                                                ] ;
+                            time:inXSDDate "1901-03-29"^^xsd:date
+                          ] ;
+        time:hasEnd [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                            time:numericPosition -2008454400.0
+                                          ] ;
+                      time:inXSDDate "1903-11-23"^^xsd:date
+                    ] ;
+        time:intervalAfter parl:rd ;
+        time:intervalBefore parl:st .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/st
+parl:st rdf:type owl:NamedIndividual ,
+                 reg:RegisteredItem ,
+                 time:ProperInterval ;
+        reg:register parl: ;
+        rdfs:label "1st Parliament" ;
+        time:hasBeginning [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                  time:numericPosition -2169936000.0
+                                                ] ;
+                            time:inXSDDate "1901-03-29"^^xsd:date
+                          ] ;
+        time:hasEnd [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                            time:numericPosition -2086214400.0
+                                          ] ;
+                      time:inXSDDate "1903-11-23"^^xsd:date
+                    ] ;
+        time:intervalAfter parl:nd .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/th
+parl:th rdf:type owl:NamedIndividual ,
+                 reg:RegisteredItem ,
+                 time:ProperInterval ;
+        reg:register parl: ;
+        rdfs:label "45th Parliament" ;
+        time:hasBeginning [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                  time:numericPosition 1467417600.0
+                                                ] ;
+                            time:inXSDDate "1901-03-29"^^xsd:date
+                          ] ;
+        time:intervalBefore parl:rd .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/
+pm: rdf:type owl:NamedIndividual ,
+             reg:Register ;
+    rdfs:label "Register of Prime Ministerships" .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Abbott
+pm:Abbott rdf:type owl:NamedIndividual ,
+                   reg:RegisteredItem ,
+                   time:ProperInterval ;
+          time:intervalAfter pm:Turnbull ;
+          time:intervalBefore pm:Rudd2 .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Gillard
+pm:Gillard rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           time:intervalAfter pm:Rudd2 ;
+           time:intervalBefore pm:Rudd .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Howard
+pm:Howard rdf:type owl:NamedIndividual ,
+                   reg:RegisteredItem ,
+                   time:ProperInterval ;
+          time:intervalAfter pm:Rudd ;
+          time:intervalBefore pm:Keating .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Keating
+pm:Keating rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "Keating" ;
+           time:hasBeginning [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                                     time:numericPosition 693187200.0
+                                                   ] ;
+                               time:inXSDDate "1991-12-20"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ time:hasTRS <http://dbpedia.org/resource/Unix_time> ;
+                                               time:numericPosition 826502400.0
+                                             ] ;
+                         time:inXSDDate "1996-03-11"^^xsd:date
+                       ] ;
+           time:intervalAfter pm:Howard .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Morrison
+pm:Morrison rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            time:intervalBefore pm:Turnbull .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Rudd
+pm:Rudd rdf:type owl:NamedIndividual ,
+                 reg:RegisteredItem ,
+                 time:ProperInterval ;
+        time:intervalAfter pm:Gillard ;
+        time:intervalBefore pm:Howard .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Rudd2
+pm:Rudd2 rdf:type owl:NamedIndividual ,
+                  reg:RegisteredItem ,
+                  time:ProperInterval ;
+         time:intervalAfter pm:Abbott ;
+         time:intervalBefore pm:Gillard .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Turnbull
+pm:Turnbull rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            time:intervalAfter pm:Morrison ;
+            time:intervalBefore pm:Abbott .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

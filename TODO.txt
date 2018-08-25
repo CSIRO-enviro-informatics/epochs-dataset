@@ -1,0 +1,12 @@
+This file contains notes on things to do regarding the dataset's data only.
+
+
+* check dates for Keating Government
+  * do they equal the Keating Prime Ministership?
+
+
+* should each TRS' URI contain /trs/?
+  * <http://linked.data.gov.au/dataset/epochs/trs/government/Keating> v. <http://linked.data.gov.au/dataset/epochs/government/Keating>
+
+
+* should we rename Epochs to Eras to match http://resource.geosciml.org/classifier/ics/ischart/GeochronologicEras?

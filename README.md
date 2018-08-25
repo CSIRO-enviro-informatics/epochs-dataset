@@ -3,15 +3,18 @@ This is a Linked Data dataset that contains representations of epochs relevant t
 
 *As of August, 2018, this dataset is at a very early stage of development and while this abstract is written as if the dataset is complete and functioning, it is not.*
 
-This dataset is composed of multiple, named, *timelines* split into *epochs* with relations between them represented using <a href="https://doi.org/10.1016/0004-3702(84)90008-0">Allen's interval algebra</a>. The dataset uses the [Resource Description Framework (RDF)](https://www.w3.org/RDF/) for all data and makes use of the [Time Ontology in OWL](https://www.w3.org/TR/owl-time/) and well known upper ontologies for its modelling.
+This dataset is composed of multiple, named, *timescales* split into *epochs* with relations between them represented using <a href="https://doi.org/10.1016/0004-3702(84)90008-0">Allen's interval algebra</a>. The dataset uses the [Resource Description Framework (RDF)](https://www.w3.org/RDF/) for all data and makes use of the [Time Ontology in OWL](https://www.w3.org/TR/owl-time/) and well known upper ontologies for its modelling.
 
-Each *timeline* and *epoch* is identified using a persistent URI (PID URI) which is a long-term stable web address issued by the [Australian Government Linked Data Working Group](http://www.linked.data.gov.au). This means that even when technologies and organisations change, the timelines and epochs will be able to be referred to and linked to via web addresses such as this for the Prime Ministerial timeline:
+Each *timescales* and *epoch* is identified using a persistent URI (PID URI) which is a long-term stable web address issued by the [Australian Government Linked Data Working Group](http://www.linked.data.gov.au). This means that even when technologies and organisations change, the timescales and epochs will be able to be referred to and linked to via web addresses such as this for the Prime Ministerships timescale:
 
 ```
-http://linked.data.gov.au/dataset/epochs/prime-ministerships
+http://linked.data.gov.au/dataset/epochs/trs/prime-ministerships
 ```
 
-The dataset itself is identified by the PID URI that is the base for all timeline and epoch PID URIs, namely:
+The dataset delivers the Prime Ministerships timescale as a Temporal Reference System (hence the URI path segment 'trs') and the URI above delivers information about that timescale/trs. For all the individual Prime Ministerships within that timescale, a slash '/', is appended to the timescale URI to indicate that a register of all its constituent parts, in this case Prime Ministerships, is requested.
+
+
+The dataset itself is identified by the PID URI that is the base for all timescales and epoch PID URIs, namely:
 
 ```
 http://linked.data.gov.au/dataset/epochs
@@ -25,10 +28,12 @@ This dataset has been developed to act as a temporal reference system for severa
 
 ```
 get me the Australian Federal Government Departments,
-as they were during the Keating government
+as they were during the Keating Prime Ministership
 ```
 
-Such queries use well-known epochs to describe time periods, rather than numerical time values. This dataset provides fixity for those epochs and relates them to numerical time.
+Here an imagined dataset containing Australian Federal Government Departments (*Departments* being the Australian equivalent of other government's *Ministries*) is queries for the list of those Departments, as they were during the *Keating Prime Ministership*, the time period in which Paul Keating was Prime Minister (1991 - 1996). Since this time period, or *epoch* was length, 5 years, and Departments changed during that time, one could expect such a query to return multiple lists of Departments, one for every configuration during that epoch.
+
+Since this dataset related all its *epochs* in all *timescales* to two numerical timescales - the [Gregorian Calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) and [Unix time](https://en.wikipedia.org/wiki/Unix_time) - calculations across any timescales and queries with numerical dates are possible.
 
 
 ## License
