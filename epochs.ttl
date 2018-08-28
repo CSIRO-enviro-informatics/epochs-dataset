@@ -289,13 +289,13 @@ parl:th rdf:type owl:NamedIndividual ,
         time:intervalBefore parl:rd .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/
 pm: rdf:type owl:NamedIndividual ,
              reg:Register ;
     rdfs:label "Register of Prime Ministerships" .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Abbott
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Abbott
 pm:Abbott rdf:type owl:NamedIndividual ,
                    reg:RegisteredItem ,
                    time:ProperInterval ;
@@ -303,7 +303,7 @@ pm:Abbott rdf:type owl:NamedIndividual ,
           time:intervalBefore pm:Rudd2 .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Gillard
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Gillard
 pm:Gillard rdf:type owl:NamedIndividual ,
                     reg:RegisteredItem ,
                     time:ProperInterval ;
@@ -311,7 +311,7 @@ pm:Gillard rdf:type owl:NamedIndividual ,
            time:intervalBefore pm:Rudd .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Howard
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Howard
 pm:Howard rdf:type owl:NamedIndividual ,
                    reg:RegisteredItem ,
                    time:ProperInterval ;
@@ -319,7 +319,7 @@ pm:Howard rdf:type owl:NamedIndividual ,
           time:intervalBefore pm:Keating .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Keating
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Keating
 pm:Keating rdf:type owl:NamedIndividual ,
                     reg:RegisteredItem ,
                     time:ProperInterval ;
@@ -338,14 +338,14 @@ pm:Keating rdf:type owl:NamedIndividual ,
            time:intervalAfter pm:Howard .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Morrison
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Morrison
 pm:Morrison rdf:type owl:NamedIndividual ,
                      reg:RegisteredItem ,
                      time:ProperInterval ;
             time:intervalBefore pm:Turnbull .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Rudd
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Rudd
 pm:Rudd rdf:type owl:NamedIndividual ,
                  reg:RegisteredItem ,
                  time:ProperInterval ;
@@ -353,7 +353,7 @@ pm:Rudd rdf:type owl:NamedIndividual ,
         time:intervalBefore pm:Howard .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Rudd2
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Rudd2
 pm:Rudd2 rdf:type owl:NamedIndividual ,
                   reg:RegisteredItem ,
                   time:ProperInterval ;
@@ -361,7 +361,7 @@ pm:Rudd2 rdf:type owl:NamedIndividual ,
          time:intervalBefore pm:Gillard .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/prims-minstership/Turnbull
+###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/Turnbull
 pm:Turnbull rdf:type owl:NamedIndividual ,
                      reg:RegisteredItem ,
                      time:ProperInterval ;
