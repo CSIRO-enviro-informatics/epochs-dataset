@@ -236,8 +236,8 @@ parl: rdf:type owl:NamedIndividual ,
       rdfs:label "Register of Parliaments" .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/nd
-parl:nd rdf:type owl:NamedIndividual ,
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/2nd
+parl:2nd rdf:type owl:NamedIndividual ,
                  reg:RegisteredItem ,
                  time:ProperInterval ;
         reg:register parl: ;
@@ -256,8 +256,8 @@ parl:nd rdf:type owl:NamedIndividual ,
         time:intervalBefore parl:st .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/st
-parl:st rdf:type owl:NamedIndividual ,
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/1st
+parl:1st rdf:type owl:NamedIndividual ,
                  reg:RegisteredItem ,
                  time:ProperInterval ;
         reg:register parl: ;
@@ -275,8 +275,8 @@ parl:st rdf:type owl:NamedIndividual ,
         time:intervalAfter parl:nd .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/th
-parl:th rdf:type owl:NamedIndividual ,
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/45th
+parl:45th rdf:type owl:NamedIndividual ,
                  reg:RegisteredItem ,
                  time:ProperInterval ;
         reg:register parl: ;
