@@ -274,60 +274,903 @@ govt:Keating rdf:type owl:NamedIndividual ,
 parl: rdf:type owl:NamedIndividual ,
                reg:Register ,
                <http://www.w3.org/2004/02/skos/core#Collection> ;
-      rdfs:label "Register of Parliaments" .
+      rdfs:label "Register of Parliaments of Australia" ;
+      <http://www.w3.org/2004/02/skos/core#member> parl:nd ,
+                                                   parl:st .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/nd
-parl:nd rdf:type owl:NamedIndividual ,
-                 reg:RegisteredItem ,
-                 time:ProperInterval ;
-        reg:register parl: ;
-        rdfs:label "2nd Parliament" ;
-        time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
-                                                  time:numericPosition -2084227200.0
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/eighteenth
+parl:eighteenth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "18th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:nineteenth ;
+                time:intervalBefore parl:seventeenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/eighth
+parl:eighth rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            reg:register parl: ;
+            rdfs:label "8th Parliament" ;
+            time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+            time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                time:numericPosition 123456789
+                                              ] ;
+                          time:inXSDDate "2000-01-01"^^xsd:date
+                        ] ;
+            time:intervalAfter parl:ninth ;
+            time:intervalBefore parl:seventh .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/eleventh
+parl:eleventh rdf:type owl:NamedIndividual ,
+                       reg:RegisteredItem ,
+                       time:ProperInterval ;
+              reg:register parl: ;
+              rdfs:label "11th Parliament" ;
+              time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                        time:numericPosition 123456789
+                                                      ] ;
+                                  time:inXSDDate "2000-01-01"^^xsd:date
+                                ] ;
+              time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                  time:numericPosition 123456789
                                                 ] ;
-                            time:inXSDDate "1901-03-29"^^xsd:date
+                            time:inXSDDate "2000-01-01"^^xsd:date
                           ] ;
-        time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
-                                            time:numericPosition -2008454400.0
-                                          ] ;
-                      time:inXSDDate "1903-11-23"^^xsd:date
-                    ] ;
-        time:intervalAfter parl:rd ;
-        time:intervalBefore parl:st .
+              time:intervalAfter parl:twelfth ;
+              time:intervalBefore parl:tenth .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/st
-parl:st rdf:type owl:NamedIndividual ,
-                 reg:RegisteredItem ,
-                 time:ProperInterval ;
-        reg:register parl: ;
-        rdfs:label "1st Parliament" ;
-        time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
-                                                  time:numericPosition -2169936000.0
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fifteenth
+parl:fifteenth rdf:type owl:NamedIndividual ,
+                        reg:RegisteredItem ,
+                        time:ProperInterval ;
+               reg:register parl: ;
+               rdfs:label "15th Parliament" ;
+               time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                         time:numericPosition 123456789
+                                                       ] ;
+                                   time:inXSDDate "2000-01-01"^^xsd:date
+                                 ] ;
+               time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                   time:numericPosition 123456789
+                                                 ] ;
+                             time:inXSDDate "2000-01-01"^^xsd:date
+                           ] ;
+               time:intervalAfter parl:sixteenth ;
+               time:intervalBefore parl:fourteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fifth
+parl:fifth rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "5th Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition 123456789
+                                             ] ;
+                         time:inXSDDate "2000-01-01"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:sixth ;
+           time:intervalBefore parl:fourth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/first
+parl:first rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:comment "This was the first Federal parliament convened in Australia"@en ;
+           rdfs:label "1st Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition -2169936000.0
+                                                   ] ;
+                               time:inXSDDate "1901-03-29"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition -2086214400.0
+                                             ] ;
+                         time:inXSDDate "1903-11-23"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:second .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortieth
+parl:fortieth rdf:type owl:NamedIndividual ,
+                       reg:RegisteredItem ,
+                       time:ProperInterval ;
+              reg:register parl: ;
+              rdfs:label "40th Parliament" ;
+              time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                        time:numericPosition 123456789
+                                                      ] ;
+                                  time:inXSDDate "2000-01-01"^^xsd:date
+                                ] ;
+              time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                  time:numericPosition 123456789
                                                 ] ;
-                            time:inXSDDate "1901-03-29"^^xsd:date
+                            time:inXSDDate "2000-01-01"^^xsd:date
                           ] ;
-        time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
-                                            time:numericPosition -2086214400.0
-                                          ] ;
-                      time:inXSDDate "1903-11-23"^^xsd:date
-                    ] ;
-        time:intervalAfter parl:nd .
+              time:intervalAfter parl:fortyfirst ;
+              time:intervalBefore parl:thirtyninth .
 
 
-###  http://linked.data.gov.au/dataset/epochs/trs/parliament/th
-parl:th rdf:type owl:NamedIndividual ,
-                 reg:RegisteredItem ,
-                 time:ProperInterval ;
-        reg:register parl: ;
-        rdfs:label "45th Parliament" ;
-        time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
-                                                  time:numericPosition 1467417600.0
-                                                ] ;
-                            time:inXSDDate "1901-03-29"^^xsd:date
-                          ] ;
-        time:intervalBefore parl:rd .
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortyfifth
+parl:fortyfifth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "45th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 1472515200.0
+                                                        ] ;
+                                    time:inXSDDate "2016-08-30"^^xsd:date
+                                  ] ;
+                time:intervalBefore parl:fortyforth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortyfirst
+parl:fortyfirst rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "41st Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:fortysecond ;
+                time:intervalBefore parl:fortieth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortyforth
+parl:fortyforth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "44th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:fortyfifth ;
+                time:intervalBefore parl:fortythird .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortysecond
+parl:fortysecond rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "42nd Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:fortythird ;
+                 time:intervalBefore parl:fortyfirst .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fortythird
+parl:fortythird rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "43rd Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:fortyforth ;
+                time:intervalBefore parl:fortysecond .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fourteenth
+parl:fourteenth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "14th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:fifteenth ;
+                time:intervalBefore parl:thirteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/fourth
+parl:fourth rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            reg:register parl: ;
+            rdfs:label "4th Parliament" ;
+            time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+            time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                time:numericPosition 123456789
+                                              ] ;
+                          time:inXSDDate "2000-01-01"^^xsd:date
+                        ] ;
+            time:intervalAfter parl:fifth ;
+            time:intervalBefore parl:third .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/nineteenth
+parl:nineteenth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "19th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:twentieth ;
+                time:intervalBefore parl:eighteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/ninth
+parl:ninth rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "9th Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition 123456789
+                                             ] ;
+                         time:inXSDDate "2000-01-01"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:tenth ;
+           time:intervalBefore parl:eighth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/second
+parl:second rdf:type owl:NamedIndividual ,
+                     reg:RegisteredItem ,
+                     time:ProperInterval ;
+            reg:register parl: ;
+            rdfs:label "2nd Parliament" ;
+            time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition -2084227200.0
+                                                    ] ;
+                                time:inXSDDate "1901-03-29"^^xsd:date
+                              ] ;
+            time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                time:numericPosition -2008454400.0
+                                              ] ;
+                          time:inXSDDate "1903-11-23"^^xsd:date
+                        ] ;
+            time:intervalAfter parl:third ;
+            time:intervalBefore parl:first .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/seventeenth
+parl:seventeenth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "17th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:eighteenth ;
+                 time:intervalBefore parl:sixteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/seventh
+parl:seventh rdf:type owl:NamedIndividual ,
+                      reg:RegisteredItem ,
+                      time:ProperInterval ;
+             reg:register parl: ;
+             rdfs:label "7th Parliament" ;
+             time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                       time:numericPosition 123456789
+                                                     ] ;
+                                 time:inXSDDate "2000-01-01"^^xsd:date
+                               ] ;
+             time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                 time:numericPosition 123456789
+                                               ] ;
+                           time:inXSDDate "2000-01-01"^^xsd:date
+                         ] ;
+             time:intervalAfter parl:eighth ;
+             time:intervalBefore parl:sixth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/sixteenth
+parl:sixteenth rdf:type owl:NamedIndividual ,
+                        reg:RegisteredItem ,
+                        time:ProperInterval ;
+               reg:register parl: ;
+               rdfs:label "16th Parliament" ;
+               time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                         time:numericPosition 123456789
+                                                       ] ;
+                                   time:inXSDDate "2000-01-01"^^xsd:date
+                                 ] ;
+               time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                   time:numericPosition 123456789
+                                                 ] ;
+                             time:inXSDDate "2000-01-01"^^xsd:date
+                           ] ;
+               time:intervalAfter parl:seventeenth ;
+               time:intervalBefore parl:fifteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/sixth
+parl:sixth rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "6th Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition 123456789
+                                             ] ;
+                         time:inXSDDate "2000-01-01"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:seventh ;
+           time:intervalBefore parl:fifth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/tenth
+parl:tenth rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "10th Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition 123456789
+                                             ] ;
+                         time:inXSDDate "2000-01-01"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:eleventh ;
+           time:intervalBefore parl:ninth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/third
+parl:third rdf:type owl:NamedIndividual ,
+                    reg:RegisteredItem ,
+                    time:ProperInterval ;
+           reg:register parl: ;
+           rdfs:label "3rd Parliament" ;
+           time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+           time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                               time:numericPosition 123456789
+                                             ] ;
+                         time:inXSDDate "2000-01-01"^^xsd:date
+                       ] ;
+           time:intervalAfter parl:fourth ;
+           time:intervalBefore parl:second .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirteenth
+parl:thirteenth rdf:type owl:NamedIndividual ,
+                         reg:RegisteredItem ,
+                         time:ProperInterval ;
+                reg:register parl: ;
+                rdfs:label "13th Parliament" ;
+                time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                          time:numericPosition 123456789
+                                                        ] ;
+                                    time:inXSDDate "2000-01-01"^^xsd:date
+                                  ] ;
+                time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                    time:numericPosition 123456789
+                                                  ] ;
+                              time:inXSDDate "2000-01-01"^^xsd:date
+                            ] ;
+                time:intervalAfter parl:fourteenth ;
+                time:intervalBefore parl:twelfth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtheth
+parl:thirtheth rdf:type owl:NamedIndividual ,
+                        reg:RegisteredItem ,
+                        time:ProperInterval ;
+               reg:register parl: ;
+               rdfs:label "30th Parliament" ;
+               time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                         time:numericPosition 123456789
+                                                       ] ;
+                                   time:inXSDDate "2000-01-01"^^xsd:date
+                                 ] ;
+               time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                   time:numericPosition 123456789
+                                                 ] ;
+                             time:inXSDDate "2000-01-01"^^xsd:date
+                           ] ;
+               time:intervalAfter parl:thirtyfirst ;
+               time:intervalBefore parl:twentyninth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyeighth
+parl:thirtyeighth rdf:type owl:NamedIndividual ,
+                           reg:RegisteredItem ,
+                           time:ProperInterval ;
+                  reg:register parl: ;
+                  rdfs:label "38th Parliament" ;
+                  time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                            time:numericPosition 123456789
+                                                          ] ;
+                                      time:inXSDDate "2000-01-01"^^xsd:date
+                                    ] ;
+                  time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+                  time:intervalAfter parl:thirtyninth ;
+                  time:intervalBefore parl:thirtyseventh .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyfifth
+parl:thirtyfifth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "35th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtysixth ;
+                 time:intervalBefore parl:thirtyforth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyfirst
+parl:thirtyfirst rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "31st Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtysecond ;
+                 time:intervalBefore parl:thirtheth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyforth
+parl:thirtyforth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "34th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtyfifth ;
+                 time:intervalBefore parl:thirtythird .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyninth
+parl:thirtyninth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "39th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:fortieth ;
+                 time:intervalBefore parl:thirtyeighth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtysecond
+parl:thirtysecond rdf:type owl:NamedIndividual ,
+                           reg:RegisteredItem ,
+                           time:ProperInterval ;
+                  reg:register parl: ;
+                  rdfs:label "32nd Parliament" ;
+                  time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                            time:numericPosition 123456789
+                                                          ] ;
+                                      time:inXSDDate "2000-01-01"^^xsd:date
+                                    ] ;
+                  time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+                  time:intervalAfter parl:thirtythird ;
+                  time:intervalBefore parl:thirtyfirst .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtyseventh
+parl:thirtyseventh rdf:type owl:NamedIndividual ,
+                            reg:RegisteredItem ,
+                            time:ProperInterval ;
+                   reg:register parl: ;
+                   rdfs:label "37th Parliament" ;
+                   time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                             time:numericPosition 123456789
+                                                           ] ;
+                                       time:inXSDDate "2000-01-01"^^xsd:date
+                                     ] ;
+                   time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                       time:numericPosition 123456789
+                                                     ] ;
+                                 time:inXSDDate "2000-01-01"^^xsd:date
+                               ] ;
+                   time:intervalAfter parl:thirtyeighth ;
+                   time:intervalBefore parl:thirtysixth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtysixth
+parl:thirtysixth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "36th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtyseventh ;
+                 time:intervalBefore parl:thirtyfifth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/thirtythird
+parl:thirtythird rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "33rd Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtyforth ;
+                 time:intervalBefore parl:thirtysecond .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twelfth
+parl:twelfth rdf:type owl:NamedIndividual ,
+                      reg:RegisteredItem ,
+                      time:ProperInterval ;
+             reg:register parl: ;
+             rdfs:label "12th Parliament" ;
+             time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                       time:numericPosition 123456789
+                                                     ] ;
+                                 time:inXSDDate "2000-01-01"^^xsd:date
+                               ] ;
+             time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                 time:numericPosition 123456789
+                                               ] ;
+                           time:inXSDDate "2000-01-01"^^xsd:date
+                         ] ;
+             time:intervalAfter parl:thirteenth ;
+             time:intervalBefore parl:eleventh .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentieth
+parl:twentieth rdf:type owl:NamedIndividual ,
+                        reg:RegisteredItem ,
+                        time:ProperInterval ;
+               reg:register parl: ;
+               rdfs:label "20th Parliament" ;
+               time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                         time:numericPosition 123456789
+                                                       ] ;
+                                   time:inXSDDate "2000-01-01"^^xsd:date
+                                 ] ;
+               time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                   time:numericPosition 123456789
+                                                 ] ;
+                             time:inXSDDate "2000-01-01"^^xsd:date
+                           ] ;
+               time:intervalAfter parl:twentyfirst ;
+               time:intervalBefore parl:nineteenth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyeighth
+parl:twentyeighth rdf:type owl:NamedIndividual ,
+                           reg:RegisteredItem ,
+                           time:ProperInterval ;
+                  reg:register parl: ;
+                  rdfs:label "28th Parliament" ;
+                  time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                            time:numericPosition 123456789
+                                                          ] ;
+                                      time:inXSDDate "2000-01-01"^^xsd:date
+                                    ] ;
+                  time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+                  time:intervalAfter parl:twentyninth ;
+                  time:intervalBefore parl:twentyseventh .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyfifth
+parl:twentyfifth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "25th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:twentysixth ;
+                 time:intervalBefore parl:twentyfourth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyfirst
+parl:twentyfirst rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "21st Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:twentysecond ;
+                 time:intervalBefore parl:twentieth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyfourth
+parl:twentyfourth rdf:type owl:NamedIndividual ,
+                           reg:RegisteredItem ,
+                           time:ProperInterval ;
+                  reg:register parl: ;
+                  rdfs:label "24th Parliament" ;
+                  time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                            time:numericPosition 123456789
+                                                          ] ;
+                                      time:inXSDDate "2000-01-01"^^xsd:date
+                                    ] ;
+                  time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+                  time:intervalAfter parl:twentyfifth ;
+                  time:intervalBefore parl:twentythird .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyninth
+parl:twentyninth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "29th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:thirtheth ;
+                 time:intervalBefore parl:twentyeighth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentysecond
+parl:twentysecond rdf:type owl:NamedIndividual ,
+                           reg:RegisteredItem ,
+                           time:ProperInterval ;
+                  reg:register parl: ;
+                  rdfs:label "22nd Parliament" ;
+                  time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                            time:numericPosition 123456789
+                                                          ] ;
+                                      time:inXSDDate "2000-01-01"^^xsd:date
+                                    ] ;
+                  time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                      time:numericPosition 123456789
+                                                    ] ;
+                                time:inXSDDate "2000-01-01"^^xsd:date
+                              ] ;
+                  time:intervalAfter parl:twentythird ;
+                  time:intervalBefore parl:twentyfirst .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentyseventh
+parl:twentyseventh rdf:type owl:NamedIndividual ,
+                            reg:RegisteredItem ,
+                            time:ProperInterval ;
+                   reg:register parl: ;
+                   rdfs:label "27th Parliament" ;
+                   time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                             time:numericPosition 123456789
+                                                           ] ;
+                                       time:inXSDDate "2000-01-01"^^xsd:date
+                                     ] ;
+                   time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                       time:numericPosition 123456789
+                                                     ] ;
+                                 time:inXSDDate "2000-01-01"^^xsd:date
+                               ] ;
+                   time:intervalAfter parl:twentyeighth ;
+                   time:intervalBefore parl:twentysixth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentysixth
+parl:twentysixth rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "26th Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:twentyseventh ;
+                 time:intervalBefore parl:twentyfifth .
+
+
+###  http://linked.data.gov.au/dataset/epochs/trs/parliament/twentythird
+parl:twentythird rdf:type owl:NamedIndividual ,
+                          reg:RegisteredItem ,
+                          time:ProperInterval ;
+                 reg:register parl: ;
+                 rdfs:label "23rd Parliament" ;
+                 time:hasBeginning [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                           time:numericPosition 123456789
+                                                         ] ;
+                                     time:inXSDDate "2000-01-01"^^xsd:date
+                                   ] ;
+                 time:hasEnd [ time:inTimePosition [ rdf:type :UnixTime ;
+                                                     time:numericPosition 123456789
+                                                   ] ;
+                               time:inXSDDate "2000-01-01"^^xsd:date
+                             ] ;
+                 time:intervalAfter parl:twentyfourth ;
+                 time:intervalBefore parl:twentysecond .
 
 
 ###  http://linked.data.gov.au/dataset/epochs/trs/prime-minstership/
